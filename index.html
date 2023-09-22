@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalorienrechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <h1>Idealgewichtsrechner</h1>
+    <div class="box">
+      <form onsubmit="return false">
+        <label for="height">Körpergröße</label>
+        <input type="text" required id="height" />
+        <label for="age">Alter</label>
+        <input type="number" required id="age" />
+        <label for="weight">Gewicht</label>
+        <input type="text" required id="weight" />
+        <p>Körperbau</p>
+
+        <div class="radio">
+          <input type="radio" id="w" name="gender" />
+          <label for="w">Weiblich</label>
+          <input type="radio" id="m" name="gender" />
+          <label for="m">Männlich</label>
+        </div>
+
+        <!-- -select -->
+        <p>Arbeits- und Freizeitaktivität</p>
+        <select name="" required id="sport">
+          <option value="0.95">Schlafen</option>
+          <option value="1.2">Nur sitzen oder liegen</option>
+          <option value="1.5">
+            Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen
+            Aktivitätin der Freizeit, z. B. Büroarbeit
+          </option>
+          <option value="1.7">
+            Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit,
+            z.B. Studierende, FLießbandarbeiter, Laboranten, Kraftfahrer
+          </option>
+          <option value="1.9">
+            Überwiegend gehende oder stehende Tätigkeit z. B.Berkäufer, Kellner,
+            Handwerker, Mechaniker, Hausfrauen
+          </option>
+          <option value="2.2">Körperlich anstrengende berufliche Arbeit</option>
+        </select>
+
+        <button type="button" onclick="getCalories()">Submit</button>
+      </form>
+
+      <div class="output"></div>
+      <p>Kcal</p>
+      <p>KJ</p>
+      <p>Grundumsatz</p>
+      <p class="outputGrundumsatzKcal"></p>
+      <p class="outputGrundumsatzKj"></p>
+
+      <p>Gesamtumsatz</p>
+      <p class="outputGesamtumsatzKcal"></p>
+      <p class="outputGesamtumsatzKj"></p>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
